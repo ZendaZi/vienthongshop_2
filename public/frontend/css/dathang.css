@@ -1,0 +1,52 @@
+.title_hoten{
+    font-weight: bold;
+    color: black;
+    
+}
+
+.input_hoten{
+    border:1px solid #636161; 
+    color:black;
+    
+    
+
+}
+.title_điachi{
+    font-weight: bold;
+    color: black;
+    
+    
+}
+.input_diachi{
+    border:1px solid #636161; 
+    color:rgb(143, 141, 141);
+
+    
+
+    
+
+}
+.title_sdt{
+    font-weight: bold;
+    color: black;
+    
+}
+.input_std{
+    border:1px solid #636161; 
+    color:black;
+    
+    
+
+}
+.title_email{
+    font-weight: bold;
+    color: black;
+    
+}
+.input_email{
+    border:1px solid #636161; 
+    color:black;
+    
+    
+
+}

@@ -1,0 +1,117 @@
+
+
+@media (max-width: 1200px) {
+    .category__title{
+        font-size: 16px;
+        padding-left: 30px;
+    }
+
+    .header__top-left{
+        flex-direction: column;
+        gap: 0;
+        align-items: start;
+        justify-content: center;
+        height: 50px;
+    }
+    .header__top-info{
+        height: auto;
+        font-size: 13px;
+    }
+
+    .header__top-right a{
+        font-size: 13px;
+    }
+}
+
+
+@media (max-width:992px) {
+    .search{
+        display: none;
+    }
+
+    .header__bottom{
+        display: none;
+    }
+
+    .category{
+        display: none;
+    }
+    .support{
+        display: none;
+    }
+
+    .show__menu-mobile{
+        display: block;
+    }
+
+    .ads{
+        display: none;
+    }
+
+    .product__title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icon__category{
+        display: block;
+    }    
+
+}
+
+@media (max-width:768px) {
+    .header__top-right{
+        display: none;
+    }
+}
+
+@media (max-width:576px) {
+    .menu__icon{
+        padding: 2px 8px;
+        font-size: 18px;
+    }
+
+    .menu__mobile{
+        top: 146px;
+    }
+
+    .social__links{
+        height: 36px;
+    }
+
+    .social__links li a {
+        font-size: 12px;
+        padding: 2px 5px;
+        margin: 0 2px;
+        background: #3b5998;
+        border-radius: 5px;
+    }
+
+    .slick-dots{
+        bottom: 10px;
+    }
+    
+    .slick-dots li{
+        margin: 0 8px;
+    }
+    
+    .slick-dots li button::before{
+        font-size: 10px;
+    }
+
+    .category__mobile{
+        position: fixed;
+        top: 50px;
+        right: 0;
+        min-width: 300px;
+        max-height: 80vh;
+        overflow-y: scroll;
+        background: #fff;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+        z-index: 9;
+    }
+
+
+}
+
