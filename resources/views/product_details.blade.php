@@ -28,8 +28,7 @@
         <div class="cart_check">
             <span> Số lượng:</span><br>
             </span>
-            <input class="cart_num" type="number" name="points" min="1"
-                max="100">
+            <input class="cart_num" type="number" name="points" >
             <a href="giohang"><button class="bt_cart">Thêm vào giỏ hàng</button></a>
             <a href="dathang"> <button class="bt_bynow">Mua ngay</button></a>
             <input type="number">

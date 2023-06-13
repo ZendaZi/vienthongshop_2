@@ -225,16 +225,7 @@
                     <h5 class="category__mobile-title">Danh mục sản phẩm</h5>
                     <ul class="category__list">
                         @foreach($danhmuc_sp as $_danhmuc_sp)
-                        <li>
-                            <a href="#" class="category__links">
-                                <div class="d-flex align-items-center gap-2">
-                                    <img src="./public/frontend/images/icon_menu_left.png" alt="">
-                                    <span>{{$_danhmuc_sp->ten_dm}}</span>
-                                </div>
-                                <i class="ri-arrow-down-s-line"></i>
-                            </a>
-                        </li>
-
+                        @include('category')
                         @endforeach
                     </ul>
                 </div>
@@ -253,23 +244,6 @@
     <!-- Link custom js -->
     <script src="{{asset('front-end/assets/js/main.js')}}"></script>
 
-    <script>
-        $('.slick__banner').slick({
-            dots: true,
-            infinite: true,
-            speed: 500,
-            cssEase: 'linear'
-        });
-
-
-
-        $('.menu__icon').click(function(){
-            $('.menu__mobile').toggleClass('active');
-        })
-
-        $('.icon__category').click(function(){
-            $('.category__mobile').toggleClass('active');
-        })
-    </script>
+  
 </body>
 </html>

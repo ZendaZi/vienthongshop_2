@@ -182,3 +182,22 @@
         </div>
     </div>
 </section>
+
+<script>
+    $('.slick__banner').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        cssEase: 'linear'
+    });
+
+
+
+    $('.menu__icon').click(function(){
+        $('.menu__mobile').toggleClass('active');
+    })
+
+    $('.icon__category').click(function(){
+        $('.category__mobile').toggleClass('active');
+    })
+</script>

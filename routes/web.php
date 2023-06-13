@@ -37,12 +37,24 @@ Route::get('/', function () {
 //     return view('chitietsp',compact('sanpham','danhmuc_sp'))
 // })->name('chitietsp');
 
-Route::get('{id?}', function ($id) {
+Route::get('sp{id?}', function ($id) {
   
     $sanpham=sanpham::where('id_sp',$id)->get();
     $danhmuc_sp=danhmuc_sp::all();
     return view(
         'chitietsp',
+        compact('sanpham','danhmuc_sp')
+    );
+    
+})->name('chitietsp');
+
+
+Route::get('dm{id?}', function ($id) {
+  
+    $sanpham=sanpham::where('id_danhmuc',$id)->get();
+    $danhmuc_sp=danhmuc_sp::all();
+    return view(
+        'index',
         compact('sanpham','danhmuc_sp')
     );
     
@@ -77,9 +89,10 @@ Route::get('dathang', function () {
 });
 
 
-Route::get('ct271/login', function () {
-    return view('login');
+Route::get('login', function () {
+    return view('backend/ct271/login');
 });
+
 
 Route::get('backend/ct271/admin', function () {
     return view('backend/ct271/admin');
