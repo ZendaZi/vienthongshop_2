@@ -1,10 +1,9 @@
 <?php
 
-
+use Illuminate\Support\Facades\Route;
 use App\Models\admin;
 use App\Models\sanpham;
 use App\Models\danhmuc_sp;
-use Illuminate\Support\Facades\Route;
 
 
 
@@ -29,44 +28,9 @@ Route::get('/', function () {
 
 });
 
-// Route::get('chitietsp/{id?}', function ($id = null) {
-//     // $ID= $id;
-//     $sanpham=sanpham::where('id_sp',$id)->get();
-//     // dd($sanpham);
-//     $danhmuc_sp=danhmuc_sp::all();
-//     return view('chitietsp',compact('sanpham','danhmuc_sp'))
-// })->name('chitietsp');
-
-Route::get('{id?}', function ($id) {
-  
-    $sanpham=sanpham::where('id_sp',$id)->get();
-    $danhmuc_sp=danhmuc_sp::all();
-    return view(
-        'chitietsp',
-        compact('sanpham','danhmuc_sp')
-    );
-    
-})->name('chitietsp');
-// Route::get('chitietsp/7', function () {
-  
-//     $sanpham=sanpham::where('id_sp',7)->get();
-//     $danhmuc_sp=danhmuc_sp::all();
-//     return view(
-//         'chitietsp',
-//         compact('sanpham','danhmuc_sp')
-//     );
-    
-// })->name('chitietsp');
-// Route::get('chitietsp/8', function () {
-  
-//     $sanpham=sanpham::where('id_sp',8)->get();
-//     $danhmuc_sp=danhmuc_sp::all();
-//     return view(
-//         'chitietsp',
-//         compact('sanpham','danhmuc_sp')
-//     );
-    
-// })->name('chitietsp');
+Route::get('chitietsp', function () {
+    return view('chitietsp');
+});
 
 Route::get('giohang', function () {
     return view('giohang');
