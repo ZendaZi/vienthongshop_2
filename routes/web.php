@@ -27,7 +27,7 @@ Route::get('/', function () {
     $danhmuc_sp=danhmuc_sp::all();
     return view('index',compact('sanpham','danhmuc_sp'));
 
-});
+})->name('index');
 
 // Route::get('chitietsp/{id?}', function ($id = null) {
 //     // $ID= $id;
@@ -49,6 +49,8 @@ Route::get('sp{id?}', function ($id) {
 })->name('chitietsp');
 
 
+
+
 Route::get('dm{id?}', function ($id) {
   
     $sanpham=sanpham::where('id_danhmuc',$id)->get();
@@ -59,30 +61,38 @@ Route::get('dm{id?}', function ($id) {
     );
     
 })->name('chitietsp');
-// Route::get('chitietsp/7', function () {
+
   
-//     $sanpham=sanpham::where('id_sp',7)->get();
-//     $danhmuc_sp=danhmuc_sp::all();
-//     return view(
-//         'chitietsp',
-//         compact('sanpham','danhmuc_sp')
-//     );
+    $sanpham=sanpham::where('id_danhmuc',$id)->get();
+    $danhmuc_sp=danhmuc_sp::all();
+    return view(
+        'chitietsp',
+        compact('sanpham','danhmuc_sp')
+    );
     
-// })->name('chitietsp');
-// Route::get('chitietsp/8', function () {
-  
-//     $sanpham=sanpham::where('id_sp',8)->get();
-//     $danhmuc_sp=danhmuc_sp::all();
-//     return view(
-//         'chitietsp',
-//         compact('sanpham','danhmuc_sp')
-//     );
-    
-// })->name('chitietsp');
+})->name('chitietsp');
 
 Route::get('giohang', function () {
-    return view('giohang');
+    $sanpham=sanpham::all();
+    $danhmuc_sp=danhmuc_sp::all();
+    return view(
+        'giohang',
+        compact('sanpham','danhmuc_sp')
+    );
 });
+
+Route::get('mua_sp{id?}', function ($id) {
+  
+    $sanpham=sanpham::where('id_sp',$id)->get();
+    $danhmuc_sp=danhmuc_sp::all();
+    return view(
+        'giohang',
+        compact('sanpham','danhmuc_sp')
+    );
+    
+})->name('chitietsp');
+
+Route::post('muangay', 'App\Http\Controllers\MuaNgay@MuaNgay');
 
 Route::get('dathang', function () {
     return view('dathang');
