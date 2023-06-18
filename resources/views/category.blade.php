@@ -6,7 +6,7 @@
     <ul class="category__list">
         @foreach($danhmuc_sp as $_danhmuc_sp) 
         <li>
-            <a href="#" class="category__links">
+            <a href="dm{{$_danhmuc_sp->id_dm}}" class="category__links">
                 <div class="d-flex align-items-center gap-2">
                     <img src="./public/frontend/images/icon_menu_left.png" alt="">
                     {{$_danhmuc_sp->ten_dm}}
@@ -39,3 +39,21 @@
         
     </ul>
 </div>
+<script>
+    $('.slick__banner').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        cssEase: 'linear'
+    });
+
+
+
+    $('.menu__icon').click(function(){
+        $('.menu__mobile').toggleClass('active');
+    })
+
+    $('.icon__category').click(function(){
+        $('.category__mobile').toggleClass('active');
+    })
+</script>

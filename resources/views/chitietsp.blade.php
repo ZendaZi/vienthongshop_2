@@ -11,13 +11,15 @@
                         <div class="col-lg-3">
                             @include('category')
                         </div>
+
+                        @foreach ($sanpham as $sp)
                         <div class="col-lg-7">
                             <div class="product__body">
-                                @foreach ($sanpham as $sp)
-                                @include('product_details') 
-                             @endforeach
+                                @include('product_details')
                             </div>
                         </div>
+                        @endforeach
+
                         @include('ads')
                     </div>
                 </div>
@@ -29,12 +31,9 @@
 
 
     <!-- Link cdn js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous">
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
-        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
     <!-- Link custom js -->
@@ -42,10 +41,10 @@
 
     <script>
         $('.slick__banner').slick({
-            dots: true,
-            infinite: true,
-            speed: 500,
-            cssEase: 'linear'
+            dots: true
+            , infinite: true
+            , speed: 500
+            , cssEase: 'linear'
         });
 
 
@@ -57,7 +56,8 @@
         $('.icon__category').click(function() {
             $('.category__mobile').toggleClass('active');
         })
-    </script>
+
+    </script> 
 </body>
 
 </html>
