@@ -12,7 +12,7 @@ class chitiet_dh extends Model
 
     protected $primaryKey = 'id_dh';
    
-    protected $fillable = [
+    protected $fillable = ['ten_sp',
     'soluong'
     ];
     public $timestamp= false;
