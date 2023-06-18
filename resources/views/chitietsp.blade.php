@@ -12,13 +12,15 @@
                             @include('category')
                         </div>
 
-                        @foreach ($sanpham as $sp)
+                        
                         <div class="col-lg-7">
+                            @foreach ($sanpham as $sp)
                             <div class="product__body">
                                 @include('product_details')
                             </div>
+                            @endforeach
                         </div>
-                        @endforeach
+                        
 
                         @include('ads')
                     </div>
@@ -41,22 +43,21 @@
 
     <script>
         $('.slick__banner').slick({
-            dots: true
-            , infinite: true
-            , speed: 500
-            , cssEase: 'linear'
+            dots: true,
+            infinite: true,
+            speed: 500,
+            cssEase: 'linear'
         });
-
-
-
-        $('.menu__icon').click(function() {
+    
+    
+    
+        $('.menu__icon').click(function(){
             $('.menu__mobile').toggleClass('active');
         })
-
-        $('.icon__category').click(function() {
+    
+        $('.icon__category').click(function(){
             $('.category__mobile').toggleClass('active');
         })
-
     </script> 
 </body>
 

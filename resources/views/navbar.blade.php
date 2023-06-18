@@ -1,4 +1,4 @@
-<header class="header">
+<!----<header class="header">
     <div class="header__top">
         <div class="container">
             <div class="row">
@@ -151,6 +151,9 @@
             <span class="menu__mobile-nav-icon"><i class="ri-arrow-right-fill"></i></span>
         </a>
     </div>
+</header>---->
+<header>
+@include('header')
 </header>
 <section>
     <div class="banner">
