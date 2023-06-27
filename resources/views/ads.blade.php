@@ -10,7 +10,7 @@
                                     <img src="./public/frontend/images/ct2.jpg" alt="">
                                 </a>
                                 <a href="#">
-                                    <img src="./public/frontend/images/ct3.jpg" alt="">
+                                    <img src="./public/frontend/images/ct2.jpg" alt="">
                                 </a>
                             </div>
                         </div>

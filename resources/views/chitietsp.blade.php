@@ -1,10 +1,12 @@
 <html>
 @include('header')
+
 <body>
+    
     <div class="app">
-        @include('navbar')
+        @include('navbar2')
         <!------------end header----------------------------------------------------------->
-        <main>
+        
             <div class="main__body">
                 <div class="container">
                     <div class="row">
@@ -12,16 +14,26 @@
                             @include('category')
                         </div>
 
-                        @foreach ($sanpham as $sp)
+                        
                         <div class="col-lg-7">
+                            @foreach ($sanpham as $sp)
                             <div class="product__body">
                                 @include('product_details')
                             </div>
+                            @endforeach
                         </div>
-                        @endforeach
+                        
 
                         @include('ads')
                     </div>
+                </div>
+                <div class="category__mobile">
+                    <h5 class="category__mobile-title">Danh mục sản phẩm</h5>
+                    <ul class="category__list">
+                        @foreach($danhmuc_sp as $_danhmuc_sp)
+                        @include('category')
+                        @endforeach
+                    </ul>
                 </div>
             </div>
         </main>
@@ -41,22 +53,21 @@
 
     <script>
         $('.slick__banner').slick({
-            dots: true
-            , infinite: true
-            , speed: 500
-            , cssEase: 'linear'
+            dots: true,
+            infinite: true,
+            speed: 500,
+            cssEase: 'linear'
         });
-
-
-
-        $('.menu__icon').click(function() {
+    
+    
+    
+        $('.menu__icon').click(function(){
             $('.menu__mobile').toggleClass('active');
         })
-
-        $('.icon__category').click(function() {
+    
+        $('.icon__category').click(function(){
             $('.category__mobile').toggleClass('active');
         })
-
     </script> 
 </body>
 

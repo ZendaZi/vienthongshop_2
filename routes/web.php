@@ -84,13 +84,14 @@ Route::get('mua_sp{id?}', function ($id) {
         compact('sanpham','danhmuc_sp')
     );
     
-})->name('chitietsp');
+})->name('giohang');
 
 Route::post('muangay', 'App\Http\Controllers\MuaNgay@MuaNgay');
 
 Route::get('dathang', function () {
     return view('dathang');
 });
+
 
 
 // Route::get('ct271/login', function () {
@@ -125,3 +126,12 @@ Route::get('quanlydh', function () {
     return view('backend.QL_DH.qldh_main', compact('listSP','danhmuc_sp','donhang','chitiet'));
 })->name('quanlydh');
 Route::post('duyetdh', 'App\Http\Controllers\quanly@duyetdh');
+=======
+Route::get('admin', function () {
+    return view('admin');
+});
+
+Route::get('login', function () {
+    return view('login');
+});
+

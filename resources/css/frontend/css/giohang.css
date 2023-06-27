@@ -1,0 +1,62 @@
+.table_cart{
+    border:solid 1px #ddd;
+    
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    font-size: 12px;
+}
+.table_cart tr{
+    border:solid 1px #ddd;
+    
+
+}
+.table_cart tr td{
+    border:solid 1px #ddd;
+    
+    
+
+}
+.img_sp{
+    width: 100px;
+}
+
+.money_all{
+    font-size: 16px;
+    height: 50px;
+    text-align: left;
+}
+.bt_cart_delete{
+    color: white;
+    background-color: red;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 5px;
+}
+.bt_ttmh{
+color: white;
+background-color: blue;
+float: right;
+border-radius: 5px;
+padding: 5px 5px;
+margin: 10px 5px;
+}
+.bt_ttmh:hover{
+    color: rgb(184, 179, 179);
+    background-color: rgb(6, 6, 119);
+
+}
+
+.tb_dh{
+color: white;
+background-color: blue;
+float: right;
+border-radius: 5px;
+padding: 5px 5px;
+margin: 10px 5px;
+
+}
+.tb_dh:hover{
+    color: rgb(184, 179, 179);
+    background-color: rgb(6, 6, 119);
+}
