@@ -1,10 +1,9 @@
 <?php
 
-
+use Illuminate\Support\Facades\Route;
 use App\Models\admin;
 use App\Models\sanpham;
 use App\Models\danhmuc_sp;
-use Illuminate\Support\Facades\Route;
 
 
 
@@ -29,6 +28,7 @@ Route::get('/', function () {
 
 });
 
+<<<<<<< HEAD
 // Route::get('chitietsp/{id?}', function ($id = null) {
 //     // $ID= $id;
 //     $sanpham=sanpham::where('id_sp',$id)->get();
@@ -81,6 +81,11 @@ Route::get('{id?}', function ($id) {
     
 })->name('chitietsp');
 >>>>>>> Stashed changes
+=======
+Route::get('chitietsp', function () {
+    return view('chitietsp');
+});
+>>>>>>> parent of 88a7af7 (Revert "Revert "HungND up code"")
 
 Route::get('giohang', function () {
     return view('giohang');
