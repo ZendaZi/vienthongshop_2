@@ -26,15 +26,22 @@
         <div class="vat">(Đã bao gồm VAT)</div>
 
         <div class="cart_check">
-            <span> Số lượng:</span><br>
+            {{-- <span> Số lượng:</span><br>
             </span>
 
             <input class="cart_num" value="1" type="number" name="points" min="1"
-                max="100">
+                max="100"> --}}
                 
 
-            <a href="giohang" id="add_cart" name="add_cart" class="bt_cart">Thêm vào giỏ hàng</a>
-            <a href="mua_sp{{$sp->id_sp}}{{}}" class="bt_bynow"> Mua ngay</a>
+           
+            @if ($sp->kho>0)
+            <a href="giohang" id="add_cart" name="add_cart" class="bt_cart">Thêm vào giỏ hàng</a>  
+            <a href="mua_sp{{$sp->id_sp}}" class="bt_bynow"> Mua ngay</a>
+            @else
+                <a href="" class="bt_bynow"> HẾT HÀNG</a>
+            
+            @endif
+           
 
             <input type="number">
             <div class="facebook">

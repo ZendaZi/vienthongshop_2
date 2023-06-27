@@ -70,19 +70,16 @@
                                                 <tbody>
                                                     <form action="{{ url('muangay') }}" method="post">
                                                        @csrf
-                                                    @foreach ( $sanpham as $sp)
-                                                        
-                                                   
+                                                    @foreach ( $sanpham as $sp) 
                                                 <tr>
                                                     <td>1</td>
                                                     <td>{{$sp->ten_sp}}
-                                                        <input type="hidden" name="id_sp" value="{{$sp->id_sp}}"></td>
+                                                        <input type="hidden" name="id_sp" value="{{$sp->id_sp}}">
+                                                        <input type="hidden" name="kho" value="{{$sp->kho}}"></td>
                                                     <td class="img_sp"><img src="{{$sp->link_imgsp}}"> </td>
                                                     <td> <input class="cart_num" value="1" type="number" name="soluong" min="1"
-                                                        max="100"></td>
+                                                        max="{{$sp->kho}}"></td>
                                                     <td>{{$sp->	gia_sp}}</td>
-                                                   
-                                                  
                                                 </tr>
                                                 @endforeach
                                               

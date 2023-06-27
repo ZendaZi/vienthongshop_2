@@ -11,16 +11,10 @@ class MuaNgay extends Controller
 {
     public function MuaNgay(Request $request)
     {
-        // dd($request->all());
-        // DB::table('NGUOI_DUNG')
-        //     ->where('ID_NGUOIDUNG', $request->ID_NGUOIDUNG)
-        //     ->update([
-        //         'TRANGTHAI' => 'Đã khoá',
-        //     ]);
-
-       
-
-
+      
+      if ($request->kho - $request->soluong >=0) {
+        $conlai=$request->kho - $request->soluong;
+      
         DB::table('donhang')
         ->insert([
             'ten_kh' => $request->ten_kh,
@@ -37,9 +31,17 @@ if ($dh !=null) {
       'id_sp' => $request->id_sp,
       'soluong' => $request->soluong,
   ]);
+  DB::table('sanpham')
+            ->where('id_sp', $request->id_sp)
+            ->update([
+                'kho' => $conlai,
+            ]);
 }else{
    return redirect()->back();
 }
 return redirect()->route('index');
+    }else{
+      return redirect()->back();
     }
+  }
 }

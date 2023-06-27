@@ -16,7 +16,8 @@ class sanpham extends Model
     'id_danhmuc',
     'ten_sp',
     'link_imgsp',
-    'gia_sp'
+    'gia_sp',
+    'kho'
     ];
     public $timestamp= false;
 }
