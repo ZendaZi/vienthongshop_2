@@ -28,10 +28,21 @@
         <div class="cart_check">
             <span> Số lượng:</span><br>
             </span>
+<<<<<<< Updated upstream
             <input class="cart_num" type="number" name="points" min="1"
                 max="100">
             <a href="giohang"><button class="bt_cart">Thêm vào giỏ hàng</button></a>
             <a href="dathang"> <button class="bt_bynow">Mua ngay</button></a>
+=======
+
+            <input class="cart_num" value="1" type="number" name="points" min="1"
+                max="100">
+                
+
+            <a href="giohang" id="add_cart" name="add_cart" class="bt_cart">Thêm vào giỏ hàng</a>
+            <a href="mua_sp{{$sp->id_sp}}{{}}" class="bt_bynow"> Mua ngay</a>
+
+>>>>>>> Stashed changes
             <input type="number">
             <div class="facebook">
                 <div class="fb-share-button"

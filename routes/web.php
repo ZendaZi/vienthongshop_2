@@ -56,6 +56,7 @@ Route::get('{id?}', function ($id) {
 //         compact('sanpham','danhmuc_sp')
 //     );
     
+<<<<<<< Updated upstream
 // })->name('chitietsp');
 // Route::get('chitietsp/8', function () {
   
@@ -67,6 +68,19 @@ Route::get('{id?}', function ($id) {
 //     );
     
 // })->name('chitietsp');
+=======
+})->name('chitietsp');
+
+  
+    $sanpham=sanpham::where('id_danhmuc',$id)->get();
+    $danhmuc_sp=danhmuc_sp::all();
+    return view(
+        'chitietsp',
+        compact('sanpham','danhmuc_sp')
+    );
+    
+})->name('chitietsp');
+>>>>>>> Stashed changes
 
 Route::get('giohang', function () {
     return view('giohang');
@@ -77,10 +91,18 @@ Route::get('dathang', function () {
 });
 
 
+<<<<<<< Updated upstream
 Route::get('ct271/login', function () {
     return view('login');
 });
 
+=======
+Route::get('login', function () {
+    return view('backend/ct271/login');
+});
+
+
+>>>>>>> Stashed changes
 Route::get('backend/ct271/admin', function () {
     return view('backend/ct271/admin');
 });

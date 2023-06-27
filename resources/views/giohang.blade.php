@@ -282,6 +282,7 @@
                                     <div class="product__item col-lg-12">
                                         <div class="cart">
                                             <table class="table_cart">
+<<<<<<< Updated upstream
                                                 <tr class="table_row">
                                                     <td style="width: 50px;">STT </td>
                                                     <td colspan="2">SẢN PHẨM</td>
@@ -306,6 +307,33 @@
                                                     <td>1.500.000</td>
                                                     <td>1.500.000</td>
                                                     <td><button class="bt_cart_delete">Xóa</button></td>
+=======
+                                                <thead class="table_row">
+                                                    <th >STT </th>
+                                                    <th >SẢN PHẨM</th>
+                                                    <th >HÌNH ẢNH</th>
+                                                    <th >SỐ LƯỢNG</th>
+                                                    <th >ĐƠN GIÁ</th>
+                                                   
+                                                   
+                                                </thead>
+                                                <tbody>
+                                                    <form action="{{ url('muangay') }}" method="post">
+                                                       @csrf
+                                                    @foreach ( $sanpham as $sp)
+                                                        
+                                                   
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>{{$sp->ten_sp}}
+                                                        <input type="hidden" name="id_sp" value="{{$sp->id_sp}}"></td>
+                                                    <td class="img_sp"><img src="{{$sp->link_imgsp}}"> </td>
+                                                    <td> <input class="cart_num" value="1" type="number" name="soluong" min="1"
+                                                        max="100"></td>
+                                                    <td>{{$sp->	gia_sp}}</td>
+                                                   
+                                                  
+>>>>>>> Stashed changes
                                                 </tr>
 
                                                 <tr>
