@@ -62,15 +62,7 @@ Route::get('dm{id?}', function ($id) {
     
 })->name('chitietsp');
 
-  
-    $sanpham=sanpham::where('id_danhmuc',$id)->get();
-    $danhmuc_sp=danhmuc_sp::all();
-    return view(
-        'chitietsp',
-        compact('sanpham','danhmuc_sp')
-    );
-    
-})->name('chitietsp');
+
 
 Route::get('giohang', function () {
     $sanpham=sanpham::all();
@@ -90,7 +82,7 @@ Route::get('mua_sp{id?}', function ($id) {
         compact('sanpham','danhmuc_sp')
     );
     
-})->name('chitietsp');
+})->name('giohang');
 
 Route::post('muangay', 'App\Http\Controllers\MuaNgay@MuaNgay');
 
@@ -99,11 +91,11 @@ Route::get('dathang', function () {
 });
 
 
+Route::get('admin', function () {
+    return view('admin');
+});
+
 Route::get('login', function () {
-    return view('backend/ct271/login');
+    return view('login');
 });
 
-
-Route::get('backend/ct271/admin', function () {
-    return view('backend/ct271/admin');
-});

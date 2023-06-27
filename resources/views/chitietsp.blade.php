@@ -1,10 +1,12 @@
 <html>
 @include('header')
+
 <body>
+    
     <div class="app">
-        @include('navbar')
+        @include('navbar2')
         <!------------end header----------------------------------------------------------->
-        <main>
+        
             <div class="main__body">
                 <div class="container">
                     <div class="row">
@@ -24,6 +26,14 @@
 
                         @include('ads')
                     </div>
+                </div>
+                <div class="category__mobile">
+                    <h5 class="category__mobile-title">Danh mục sản phẩm</h5>
+                    <ul class="category__list">
+                        @foreach($danhmuc_sp as $_danhmuc_sp)
+                        @include('category')
+                        @endforeach
+                    </ul>
                 </div>
             </div>
         </main>

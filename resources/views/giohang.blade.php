@@ -18,30 +18,7 @@
                 <div class="container">
                     <div class="row" style="padding-top: 20px;">
                         <div class="col-lg-3">
-                            @include('category')
-
-
-
-
-                            <div class="support">
-                                <div class="category__title">
-                                    <span>Hỗ trợ kinh doanh</span>
-                                </div>
-                                <ul>
-                                    <li class="support__info">Kinh Doanh 1: 0932 850 695</li>
-                                    <li class="support__info">Kinh Doanh 2: 0932 850 695</li>
-                                    <li class="support__info">Kinh Doanh 3: 0932 850 695</li>
-                                </ul>
-                            </div>
-                            <div class="support">
-                                <div class="category__title">
-                                    <span>Hotline Tu Van</span>
-                                </div>
-                                <ul>
-                                    <li class="support__info" style="color: red;">0932 850 695</li>
-
-                                </ul>
-                            </div>
+                            @include('category')                           
                         </div>
 
                         <div class="col-lg-7">

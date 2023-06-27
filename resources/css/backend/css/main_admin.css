@@ -1,11 +1,35 @@
+/* ***************
+***** 1. Header (10 - 179
+***** 2. Banner (182 - 195
+***** 3. Main ( 198 - )
+*****
+*****
+*********************** */
 
+
+/* ................Header.............. */
 .header__middle{
     padding: 30px 0;
 }
 
 
 
-
+.social__links li a{
+    font-size: 14px;
+    padding: 3px 6px;
+    margin: 0 4px;
+    background: #3b5998;
+    border-radius: 6px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.social__links li:nth-child(2) a{
+    background: #55acee;
+}
+.social__links li:nth-child(3) a{
+    background: #0976b4;
+}
 
 
 .header__bottom{
@@ -79,7 +103,9 @@
     border-top-left-radius: 18px;
     border-top-right-radius: 18px;
 }
-
+.category__title img{
+    width: 40px;
+}
 
 
 .category__list{
@@ -102,7 +128,9 @@
     border-bottom: none;
 }
 
-
+.category__links img{
+    width: 15px;
+}
 
 
 .icon__category{
